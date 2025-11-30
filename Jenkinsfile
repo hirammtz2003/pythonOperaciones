@@ -13,7 +13,7 @@ pipeline {
     }
     stage('Descarga') {
       steps{
-        git url:'https://github.com/hirammtz2003/pythonOperaciones.git'
+        git url:'https://github.com/hirammtz2003/pythonOperaciones.git', branch:'main'
       }
     }
     stage('Ejecutar') {
