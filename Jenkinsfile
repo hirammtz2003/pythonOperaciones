@@ -18,7 +18,7 @@ pipeline {
     }
     stage('Ejecutar') {
       steps{
-        sh 'python3 hola.py'
+        sh 'python3 test_operaciones.py'
         sh 'python3 operaciones.py'
       }
     }
