@@ -13,7 +13,8 @@ pipeline {
     }
     stage('Descarga') {
       steps{
-        git url:'https://github.com/hirammtz2003/pythonOperaciones.git', branch:'main'
+        git url: 'https://github.com/hirammtz2003/pythonOperaciones.git', 
+             branch: 'main'
       }
     }
     stage('Ejecutar') {
@@ -24,7 +25,7 @@ pipeline {
     }
     stage('Probar') {
       steps{
-        sh  'python -m pytest --juintxml=reports/results.xml'
+        sh 'python -m pytest --junitxml=reports/results.xml'
       }
       post {
         always {
